@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello VueJS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <style>
+      .color-red {
+        color: red;
+      }
+      .color-blue {
+        color: blue;
+      }
+
+      .is-loading {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h1>
+        {{message.split('').reverse().join('')}}
+      </h1>
+      <h1>
+        {{reversedMessage}}
+      </h1>
+      <h2>All Tasks</h2>
+      <ul>
+        <li v-for="task in tasks" v-text="task.description"></li>
+      </ul>
+      <h2>Incomplete Tasks</h2>
+      <ul>
+        <li v-for="task in incompleteTasks" v-text="task.description"></li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#root",
+        data: {
+          message: "Hello World",
+          tasks: [
+            { description: "Go to the store", completed: true },
+            { description: "Finish screencast", completed: false },
+            { description: "Make donation", completed: false },
+            { description: "Clear inbox", completed: false },
+            { description: "Make dinner", completed: false },
+            { description: "Clean room", completed: true }
+          ]
+        },
+        computed: {
+          reversedMessage() {
+            return this.message
+              .split("")
+              .reverse()
+              .join("");
+          },
+          incompleteTasks() {
+            return this.tasks.filter(task => !task.completed);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

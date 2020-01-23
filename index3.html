@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello VueJS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <style>
+      .color-red {
+        color: red;
+      }
+      .color-blue {
+        color: blue;
+      }
+
+      .is-loading {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h1 :class="className">Class example</h1>
+      <button @title="title">Title Example</button>
+
+      <button :class="{ 'is-loading': true}">Dynamic Class example</button>
+      <button :class="{ 'is-loading': isLoading}" @click="toggleClass">
+        Dynamic Class with click event
+      </button>
+      <button :disabled="isDisabled" @click="toggleDisabled">
+        Disabled example
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#root",
+        data: {
+          title: "This is the button",
+          className: "color-blue",
+          isLoading: false,
+          isDisabled: false
+        },
+        methods: {
+          toggleClass() {
+            this.isLoading = true;
+          },
+          toggleDisabled() {
+            this.isDisabled = true;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
