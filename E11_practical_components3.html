@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello VueJS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div id="root" class="container">
+      <tabs>
+        <tab name="About" :selected="true">
+          <h1>Here is the content for the about us tab</h1>
+        </tab>
+        <tab name="Culture">
+          <h1>Here is the content for the culture tab</h1>
+        </tab>
+        <tab name="Contact">
+          <h1>Here is the content for the contact tab</h1>
+        </tab>
+        <tab name="Location">
+          <h1>Here is the content for the location tab</h1>
+        </tab>
+      </tabs>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/e11_practical_components3.js"></script>
+  </body>
+</html>
