@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello VueJS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div id="root" class="container">
+      <coupn @applied="onCouponApplied"> </coupn>
+      <h1 v-if="couponApplied">You used a coupon!</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/e12_components_communications.js"></script>
+  </body>
+</html>
