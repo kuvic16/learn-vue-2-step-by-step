@@ -4,7 +4,6 @@ class Errors {
     }
 
     has(field) {
-        // if this.errors contains a "field" property
         return this.errors.hasOwnProperty(field);
     }
 
