@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('skills', function () {
     return ['Laravel', 'VueJS', 'ReactJS', 'PHP', 'Tooling'];
 });
+
+Route::resource('projects', 'ProjectsController');
+//Route::get('projects/create', 'ProjectsController@create');
