@@ -8,6 +8,15 @@ module.exports = {
         filename: "bundle.js",
         publicPath: "./public"
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader"
+            }
+        ]
+    },
     resolve: {
         alias: {
             vue$: "vue/dist/vue.common.js"
@@ -15,7 +24,9 @@ module.exports = {
     },
     plugins: []
 };
-if (process.env.NODE_ENV === "production") {
+
+let env = process.env.NODE_ENV;
+if (env.indexOf("production") !== -1) {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             sourcemap: true,

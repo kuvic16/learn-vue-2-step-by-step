@@ -3,13 +3,18 @@ npm install webpack@2.2.0-rc.3 --save-dev
 
 npm install vue --save-dev
 npm install axios --save-dev
+npm install babel-loader --save-dev
+npm install babel-preset-es2015 --save-dev
 
 To run for dev
 ./node_modules/.bin/webpack
 
 To run for production
-export NODE_ENV=production && .\node_modules\.bin\webpack
+linux: export NODE_ENV=production && .\node_modules\.bin\webpack
+windows: set NODE_ENV=production && .\node_modules\.bin\webpack
 
+//
+// "babel-preset-es2015": "^6.24.1",
 // "dev": "npm run development",
 // "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 // "watch": "npm run development -- --watch",
