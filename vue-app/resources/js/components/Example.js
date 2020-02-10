@@ -1,3 +1,3 @@
 export default {
-    template: "<h1>Hello World!</h1>"
+    template: "<h1>Hello World! From VCODE</h1>"
 };

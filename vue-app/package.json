@@ -1,9 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "webpack": "webpack --hide-modules",
-        "dev": "webpack --hide-modules --watch",
-        "production": "set process.env.NODE_ENV=production && webpack --hide-modules"
+        "webpack": "set NODE_ENV=development && webpack --hide-modules",
+        "dev": "set NODE_ENV=development && webpack --hide-modules --watch",
+        "production": "set NODE_ENV=production && webpack --hide-modules"
     },
     "devDependencies": {
         "axios": "^0.19.2",

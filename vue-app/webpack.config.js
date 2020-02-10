@@ -2,10 +2,13 @@ let webpack = require("webpack");
 let path = require("path");
 
 module.exports = {
-    entry: "./resources/js/app.js",
+    entry: {
+        app: "./resources/js/app.js",
+        vendor: ["vue", "axios"]
+    },
     output: {
         path: path.resolve(__dirname, "public/js"),
-        filename: "bundle.js",
+        filename: "[name].js",
         publicPath: "./public"
     },
     module: {
@@ -22,7 +25,11 @@ module.exports = {
             vue$: "vue/dist/vue.common.js"
         }
     },
-    plugins: []
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ["vendor"]
+        })
+    ]
 };
 
 let env = process.env.NODE_ENV;
@@ -32,6 +39,14 @@ if (env.indexOf("production") !== -1) {
             sourcemap: true,
             compresss: {
                 warnings: false
+            }
+        })
+    );
+
+    module.exports.plugins.push(
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: "production"
             }
         })
     );
