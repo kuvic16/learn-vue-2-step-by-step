@@ -8,9 +8,14 @@ let routes = [
     {
         path: "/about",
         component: require("./views/About").default
+    },
+    {
+        path: "/contact",
+        component: require("./views/Contact").default
     }
 ];
 
 export default new VueRouter({
-    routes
+    routes,
+    linkActiveClass: "is-active"
 });
