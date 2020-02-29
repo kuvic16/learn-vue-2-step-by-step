@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Status;
+use App\User;
 use Illuminate\Http\Request;
 
 class StatusesController extends Controller
@@ -39,7 +40,7 @@ class StatusesController extends Controller
         $this->validate($request, ['body' => 'required']);
 
         // create the status
-        $status = App\User::find(1)->statuses()->create($request->only(['body']));
+        $status = User::find(1)->statuses()->create($request->only(['body']));
 
         // return it, and also include the user
         return $status->load('user');
