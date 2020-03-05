@@ -5,10 +5,10 @@
             <a>Home</a>
         </router-link>
         <router-link tag="li" to="/about">
-            <a>About</a>
+            <a>About-US</a>
         </router-link>
         <router-link tag="li" to="/contact">
-            <a>Contact</a>
+            <a>Contact US</a>
         </router-link>
       </ul>
     </div>
