@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-33: Scoped slots</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    /> -->
+  </head>
+  <body>
+    <div id="app">
+      <menu-list :items="['one', 'two', 'three']">
+        <!-- <template scope="props">
+          <div>
+            <em v-text="props.item"></em>
+          </div>
+        </template> -->
+        <template slot="menu-item" scope="props">
+          <div>
+            <em v-text="props.item"></em>
+          </div>
+        </template>
+        <!-- <template scope="{ bar }">
+          <h2 v-text="bar"></h2>
+        </template> -->
+      </menu-list>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/e33_scoped_slots.js"></script>
+  </body>
+</html>
