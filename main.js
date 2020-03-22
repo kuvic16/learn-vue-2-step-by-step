@@ -1,4 +1,4 @@
-// 99db100c41dac603ac50519962ab0a159d12ea0c
+
 window.Event = new (class {
   constructor() {
     this.vue = new Vue();
