@@ -41,6 +41,9 @@
                             </p>
                         </div>
                     </tooltip>
+
+                    <br /><br /><br /><br /><br />
+                    <render-element></render-element>
                 </div>
             </div>
         </div>
@@ -49,9 +52,10 @@
 <script>
 import PopperTooltip from "tooltip.js";
 import Tooltip from "../components/Tooltip.vue";
+import RenderElement from "../components/RenderElement.vue";
 
 export default {
-    components: { Tooltip },
+    components: { Tooltip, RenderElement },
     mounted() {
         document.querySelectorAll("[data-tooltip]").forEach(elem => {
             new PopperTooltip(elem, {
