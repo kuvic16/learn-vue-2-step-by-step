@@ -29,7 +29,11 @@
                             >hover me</span
                         >
                     </p>
-                    <tooltip name="our-products-tooltip" placement="left">
+                    <tooltip
+                        name="our-products-tooltip"
+                        placement="left"
+                        offset="0, 20"
+                    >
                         <div class="p-4 w-64">
                             <h1>Our Products</h1>
                             <p>

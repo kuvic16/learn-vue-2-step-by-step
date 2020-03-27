@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div ref="body" v-show="false">
-            <slot></slot>
-        </div>
+    <!-- <div> -->
+    <div v-show="false">
+        <slot></slot>
     </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -12,7 +12,8 @@ import PopperTooltip from "tooltip.js";
 export default {
     props: {
         name: {},
-        placement: { default: "top" }
+        placement: { default: "top" },
+        offset: { default: false }
     },
     mounted() {
         document
@@ -20,7 +21,8 @@ export default {
             .forEach(elem => {
                 new PopperTooltip(elem, {
                     placement: this.placement,
-                    title: this.$refs.body.innerHTML,
+                    title: this.$el.innerHTML,
+                    offset: this.offset,
                     html: true
                 });
             });
