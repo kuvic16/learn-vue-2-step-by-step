@@ -12,6 +12,10 @@ let routes = [
     {
         path: "/contact",
         component: require("./views/Contact").default
+    },
+    {
+        path: "/counter",
+        component: require("./views/Counter").default
     }
 ];
 

@@ -10,6 +10,9 @@
         <router-link tag="li" to="/contact">
             <a>Contact US</a>
         </router-link>
+        <router-link tag="li" to="/counter">
+          <a>Counter</a>
+      </router-link>
       </ul>
     </div>
   </nav>
