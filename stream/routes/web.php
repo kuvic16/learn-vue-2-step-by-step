@@ -12,3 +12,6 @@ Route::get('/', function () {
 
 Route::get('/statuses', 'StatusesController@index');
 Route::post('/statuses', 'StatusesController@store');
+Route::get('/posts', function(){
+    return ['First Post', 'Second Post'];
+});

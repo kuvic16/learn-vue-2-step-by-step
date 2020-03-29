@@ -16,6 +16,10 @@ let routes = [
     {
         path: "/counter",
         component: require("./views/Counter").default
+    },
+    {
+        path: "/async",
+        component: require("./views/Async").default
     }
 ];
 

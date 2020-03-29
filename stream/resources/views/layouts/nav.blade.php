@@ -12,7 +12,10 @@
         </router-link>
         <router-link tag="li" to="/counter">
           <a>Counter</a>
-      </router-link>
+        </router-link>
+        <router-link tag="li" to="/async">
+          <a>Async</a>
+        </router-link>
       </ul>
     </div>
   </nav>
