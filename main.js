@@ -28,6 +28,7 @@ Vue.component("message", {
   `
 });
 
+// test
 new Vue({
   el: "#root"
 });
