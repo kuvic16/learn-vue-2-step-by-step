@@ -5,7 +5,7 @@
         "dev": "webpack --hide-modules --progress --watch"
     },
     "devDependencies": {
-        "axios": "^0.19",
+        "axios": "^0.21",
         "laravel-mix": "^5.0.1",
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.25.0",
