@@ -6,7 +6,7 @@
         "production": "set NODE_ENV=production && webpack --hide-modules"
     },
     "devDependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "babel-loader": "^8.0.6",
         "babel-preset-env": "^1.7.0",
         "cross-env": "^7.0",
